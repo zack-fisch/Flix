@@ -2,7 +2,7 @@
 
 <% @movies.each do |movie| %>
 	<h3>
-		<%= movie.title %> 
+		<%= link_to(movie.title, movie) %> 
 	</h3>
 	<p>
 		(<%= movie.rating %>)
