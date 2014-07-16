@@ -1,0 +1,17 @@
+	<article>
+		<header>
+			<h2><%= @movie.title %></h2>
+		</header>
+			<p>
+				<%= @movie.rating %>
+			</p>
+				<p>
+					<%= format_total_gross(@movie)%>
+				</p>
+				<p>
+					<%= @movie.description %>
+				</p>
+				<p>
+					<%= @movie.released_on.to_s(:release_date) %>
+				</p>
+	</article>
