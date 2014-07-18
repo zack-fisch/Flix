@@ -1,33 +1,5 @@
 <h1>Editing <%= @movie.title %> </h1>
 
-<%= form_for(@movie) do |f| %>
-	<p>
-		<%= f.label :title %>:
-		<%= f.text_field :title %>
-	</p>
+<%= render 'form' %>
 
-	<p>
-		<%= f.label :description %>:
-		<%= f.text_area :description, cols: 40, rows: 7 %>
-	</p>
-	
-	<p>
-		<%= f.label :rating %>:
-		<%= f.text_field :rating, size: 5 %>
-	</p>
-
-	<p>
-		<%= f.label :released_on %>:
-		<%= f.date_field :released_on %>
-	</p>
-
-	<p>
-		<%= f.label :total_gross %>:
-		<%= f.number_field :total_gross %>
-	</p>
-
-	<p>
-		<%= f.submit %>
-	</p>
-
-	<% end %>
+<%= render 'foot' %>
