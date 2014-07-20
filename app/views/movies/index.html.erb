@@ -15,7 +15,7 @@
 			<%= truncate(movie.description, length: 40, separator: ' ') %>
 		</p>
 		<p>
-			<%= movie.released_on.to_s(:release_date) %>
+			<%= movie.released_on.to_formatted_s(:long) %>  
 		</p>
 <% end %>
 
