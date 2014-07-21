@@ -12,7 +12,23 @@
 					<%= @movie.description %>
 				</p>
 				<p>
+					<%= @movie.director %>
+				</p>
+
+				<p>
+					<%= @movie.cast %>
+				</p>
+
+				<p>
+					<%= @movie.duration %>
+				</p>
+
+				<p>
 					<%= @movie.released_on.to_s(:release_date) %>
+				</p>
+
+				<p>
+					<%= image_tag @movie.image_file_name %>
 				</p>
 	</article>
 

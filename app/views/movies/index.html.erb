@@ -17,6 +17,22 @@
 		<p>
 			<%= movie.released_on.to_formatted_s(:long) %>  
 		</p>
+
+		<p>
+			<%= movie.director %>
+		</p>
+
+		<p>
+			<%= movie.cast %>
+		</p>
+
+		<p>
+			<%= movie.duration %>
+		</p>
+
+		<p>
+			<%= image_tag movie.image_file_name %>
+		</p>
 <% end %>
 
 <%= render 'foot' %>
