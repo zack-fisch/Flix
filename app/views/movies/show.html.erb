@@ -3,6 +3,9 @@
 			<h2><%= @movie.title %></h2>
 		</header>
 			<p>
+					<%= image_for(@movie) %>
+			</p>
+			<p>
 				<%= @movie.rating %>
 			</p>
 				<p>
@@ -27,15 +30,8 @@
 					<%= @movie.released_on.to_s(:release_date) %>
 				</p>
 
-				<p>
-					<%= image_for(@movie) %>
-				</p>
 	</article>
-
-<%= link_to('All Movies', root_path) %> | 
 
 <%= link_to 'Edit Movie', edit_movie_path(@movie) %> | 
 
 <%= link_to 'Delete', movie_path(@movie), method: :delete, data: {confirm: 'Are you sure?'} %>
-
-<%= render 'foot' %>

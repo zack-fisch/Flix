@@ -1,8 +1,9 @@
 <h1><%= pluralize(@movies.size, 'Movie') %></h1>
 
-<h4><%= link_to 'Add New Movie', new_movie_path %></h4>
-
 <% @movies.each do |movie| %>
+	<p>
+			<%= image_for(movie) %>
+	</p>
 	<h3>
 		<%= link_to(movie.title, movie) %> 
 	</h3>
@@ -26,9 +27,4 @@
 			<%= movie.duration %>
 		</p>
 
-		<p>
-			<%= image_for(movie) %>
-		</p>
 <% end %>
-
-<%= render 'foot' %>

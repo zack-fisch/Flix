@@ -1,46 +1,64 @@
 <%= form_for(@movie) do |f| %>
 	<p>
-		<%= f.label :title %>:
+		<%= f.label :title %>
+	</p>
+	<p>
 		<%= f.text_field :title, autofocus: true %>
 	</p>
 
 	<p>
-		<%= f.label :description %>:
+		<%= f.label :description %>
+	</p>
+	<p>
 		<%= f.text_area :description, cols: 40, rows: 7 %>
 	</p>
 	
 	<p>
-		<%= f.label :rating %>:
+		<%= f.label :rating %>
+	</p>
+	<p>
 		<%= f.text_field :rating, size: 5 %>
 	</p>
 
 	<p>
-		<%= f.label :released_on %>:
+		<%= f.label :released_on %>
+	</p>
+	<p>
 		<%= f.date_field :released_on %>
 	</p>
 
 	<p>
-		<%= f.label :total_gross %>:
+		<%= f.label :total_gross %>
+	</p>
+	<p>
 		<%= f.number_field :total_gross %>
 	</p>
 	
 	<p>
-		<%= f.label :cast %>:
+		<%= f.label :cast %>
+	</p>
+	<p>
 		<%= f.text_field :cast %>
 	</p>
 
 	<p>
-		<%= f.label :director %>:
+		<%= f.label :director %>
+	</p>
+	<p>
 		<%= f.text_field :director %>
 	</p>
 
 	<p>
-		<%= f.label :duration %>:
+		<%= f.label :duration %>
+	</p>
+	<p>
 		<%= f.text_field :duration %>
 	</p>
 
 	<p>
-		<%= f.label :image_file_name %>:
+		<%= f.label :image_file_name %>
+	</p>
+	<p>
 		<%= f.text_field :image_file_name %>
 	</p>
 
