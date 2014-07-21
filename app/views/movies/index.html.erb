@@ -19,10 +19,6 @@
 		</p>
 
 		<p>
-			<%= movie.director %>
-		</p>
-
-		<p>
 			<%= movie.cast %>
 		</p>
 
@@ -31,7 +27,7 @@
 		</p>
 
 		<p>
-			<%= image_tag movie.image_file_name %>
+			<%= image_for(movie) %>
 		</p>
 <% end %>
 
