@@ -2,13 +2,15 @@
 
 body {
   color: $primary-text-color;
-  background-image: image-url("background.jpg");
+  // background-image: image-url("background.jpg");
   font-family: "Helvetica Neue", Helvetica, Arial;
+  
 }
 
 header#page-header {
   background-color: $secondary-background-color;
   padding: 0px 25px;
+  width: 100%;
 
   h1 a {
     height: 0px;
@@ -34,7 +36,7 @@ header#page-header {
 
   div#masthead {
     margin: 0 auto;
-    width: 960px;
+    width: 100%;
     position: relative;
     text-shadow: #000 0 0 2px;
 
