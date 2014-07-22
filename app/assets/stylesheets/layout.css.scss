@@ -11,6 +11,8 @@ header#page-header {
   background-color: $secondary-background-color;
   padding: 0px 25px;
   width: 100%;
+  position: fixed;
+
 
   h1 a {
     height: 0px;
@@ -106,6 +108,7 @@ div#wrapper {
 aside#sidebar {
   width: 200px;
   float: right;
+  margin-top: 60px;
 
   h1 {
     color: $secondary-text-color;
@@ -152,4 +155,14 @@ aside#sidebar {
       }
     }
   }
+}
+
+.headroom {
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
 }

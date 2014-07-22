@@ -13,6 +13,7 @@
 /* MOVIES */
 
 article#movie {
+
   p {
     padding: .5em 0;
     font-size: 1.15em;
@@ -58,7 +59,7 @@ article#movie {
 
 ul#movies {
   list-style: none;
-  margin: 0;
+  margin-top: 60px;
   padding: 0;
   article.movie {
     margin-bottom: 1.5em;
