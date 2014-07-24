@@ -5,6 +5,7 @@
     <h2>Released: <%= @movie.released_on %></h2>
   </header>
 
+  <%= link_to pluralize(@movie.reviews.size, "Review"), movie_reviews_path(@movie) %>
   <p>
     <%= @movie.description %>
   </p>
