@@ -13,10 +13,10 @@
       </li>
       <li class="required stars">
   			<%= f.label :stars %>         
-  				<% Review::STARS.each do |star| %>
-    		<span class="star">
-     		 <%= f.radio_button :stars, star %> <%= star %>
-    		</span>
+  			<% Review::STARS.each do |star| %>
+    		<label class="star">
+     		 <%= f.radio_button :stars, star %>  <%= star %>
+    		</label>
   			<% end %>
 		</li>
       <li class="required">

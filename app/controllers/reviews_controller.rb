@@ -18,6 +18,18 @@ class ReviewsController < ApplicationController
     end
 	end
 
+	def destroy
+		@review = @movie.reviews.find(params[:id])
+		@review.destroy
+		redirect_to movies_path
+	end
+
+	def update
+		@review = @movie.reviews.find(review_params)
+		@review.update
+		redirect_to movies_path
+	end
+
 	private
 	def review_params
 		params.require(:review).permit(:name, :comment, :stars)
