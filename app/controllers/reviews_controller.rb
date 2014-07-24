@@ -25,10 +25,19 @@ class ReviewsController < ApplicationController
 	end
 
 	def update
-		@review = @movie.reviews.find(review_params)
-		@review.update
-		redirect_to movies_path
+		@review = @movie.reviews.find(params[:id])
+		if @review.update(review_params)
+			redirect_to movie_reviews_path, notice: 'Review Updated!'
+		else
+			redirect_to :back, notice: 'Improper Review, Try Again!'
+		end
+
 	end
+
+	def edit
+		@review = @movie.reviews.find(params[:id])
+	end
+
 
 	private
 	def review_params
