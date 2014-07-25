@@ -21,7 +21,7 @@ class ReviewsController < ApplicationController
 	def destroy
 		@review = @movie.reviews.find(params[:id])
 		@review.destroy
-		redirect_to movies_path
+		redirect_to movies_path, notice: 'Review Deleted!'
 	end
 
 	def update
