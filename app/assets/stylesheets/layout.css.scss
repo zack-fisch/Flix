@@ -141,6 +141,12 @@ aside#sidebar {
           
         }
 
+        &.side a {
+          display: block;
+          padding-left: 35px;
+          
+        }
+
         &.create-movie a {
           display: block;
           background: image-url("add.png") no-repeat 10px 8px;
