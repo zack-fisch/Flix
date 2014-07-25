@@ -4,3 +4,9 @@
     <h2><%= mail_to(@user.email) %></h2>
   </header>
 </article>
+
+<footer>
+	<nav>
+		<%= link_to 'Edit Account', edit_user_path(@user), class: 'button' %>
+	</nav>
+</footer>
