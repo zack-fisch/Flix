@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
   uniqueness: {case_sensitive: false}
 
   validates :username, presence: true, length: { minimum: 5 }
+
+  def gravatar_id
+  	Digest::MD5::hexdigest(email.downcase)
+  end
 end
