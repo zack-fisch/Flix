@@ -2,11 +2,16 @@
   <header>
     <h1><%= @user.name %></h1>
     <h2><%= mail_to(@user.email) %></h2>
+    <h2>Member since: <%= @user.created_at.strftime('%B %Y') %></h2>
   </header>
 </article>
 
 <footer>
 	<nav>
 		<%= link_to 'Edit Account', edit_user_path(@user), class: 'button' %>
+		<%= link_to 'Delete Account', @user,
+			method: :delete,
+			data: { confirm: 'Are you sure you wish to delete your account?' },
+			class: 'button' %>
 	</nav>
 </footer>

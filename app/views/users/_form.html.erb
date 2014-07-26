@@ -19,9 +19,17 @@
         <%= f.label :password_confirmation, "Confirm Password" %>
         <%= f.password_field :password_confirmation, size: 40 %>
       </li>
+      <li class = 'required'>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+      </li>
     </ol>
     <p>
-      <%= f.submit %>
+      <% if @user.new_record? %>
+        <%= f.submit "Create Account" %>
+      <% else %>
+        <%= f.submit "Update Account" %>
+      <% end %>
     </p>
   </fieldset>
 <% end %>
