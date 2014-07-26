@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   validates :username, presence: true, length: { minimum: 5 }
 
   def gravatar_id
-  	Digest::MD5::hexdigest(email.downcase)
+  	Digest::MD5.hexdigest(email.downcase)
   end
+  
 end
