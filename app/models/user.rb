@@ -11,5 +11,10 @@ class User < ActiveRecord::Base
   def gravatar_id
   	Digest::MD5.hexdigest(email.downcase)
   end
+
+  def self.authenticate(email, password)
+  	user = User.find_by(email: email)
+  	user && user.authenticate(password)
+  end
   
 end
