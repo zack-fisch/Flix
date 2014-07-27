@@ -4,15 +4,25 @@
       <li class="all-movies">
         <%= link_to 'All Movies', movies_path, class: 'button' %>
       </li>
+
       <li class="create-movie">
         <%= link_to 'Add New Movie', new_movie_path, class: 'button' %>
       </li>
-      <li class = 'side'>
+
+      <% if current_user %>
+        <li class= 'side'>
+          <%= link_to current_user.name, current_user, class: 'button' %>  
+        </li>  
+       <% else %>
+        <li class = 'side'>
           <%= link_to 'Sign Up', signup_path, class: 'button' %>
-      </li>
-      <li class ='side'>
-        <%= link_to 'Sign In', signin_path, class: 'button' %>
-      </li>
+        </li>
+
+         <li class ='side'>
+           <%= link_to 'Sign In', signin_path, class: 'button' %>
+          </li>
+      <% end %>
+
     </ul>
   </nav>
 </aside>
