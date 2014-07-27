@@ -12,7 +12,17 @@
       <% if current_user %>
         <li class= 'side'>
           <%= link_to current_user.name, current_user, class: 'button' %>  
-        </li>  
+        </li> 
+
+        <li class= 'side'>
+          <%= link_to 'Account Settings', edit_user_path(current_user), class: 'button' %>  
+        </li> 
+
+        <li class= 'side'>
+          <%= link_to 'Sign Out', session_path, method: :delete, class: 'button' %>  
+        </li> 
+
+        
        <% else %>
         <li class = 'side'>
           <%= link_to 'Sign Up', signup_path, class: 'button' %>
@@ -22,6 +32,7 @@
            <%= link_to 'Sign In', signin_path, class: 'button' %>
           </li>
       <% end %>
+
 
     </ul>
   </nav>
