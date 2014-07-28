@@ -28,13 +28,13 @@ ActiveRecord::Schema.define(version: 20140728211454) do
   end
 
   create_table "reviews", force: true do |t|
-    t.string   "name"
     t.integer  "stars"
     t.text     "comment"
     t.integer  "movie_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "location"
+    t.integer  "user_id"
   end
 
   add_index "reviews", ["movie_id"], name: "index_reviews_on_movie_id"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20140728211454) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin",           default: false
-    t.integer  "user_id"
+    t.string   "name"
   end
 
 end
