@@ -29,7 +29,6 @@ class UsersController < ApplicationController
 	end
 
 	def update
-		
 		if @user.update(user_params)
 			redirect_to @user
 		else
@@ -38,7 +37,6 @@ class UsersController < ApplicationController
 	end
 
 	def destroy
-		
 		@user.destroy
 		session[:user_id] = nil
 		redirect_to	root_url, alert: 'Account successfully deleted'
