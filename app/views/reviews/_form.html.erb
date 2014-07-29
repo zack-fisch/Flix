@@ -1,10 +1,6 @@
 <%= form_for([@movie, @review]) do |f| %>
   <fieldset>
     <ol>
-      <li class="required">
-        <%= f.label :name %>         
-        <%= f.text_field :name, size: 40, autofocus: true %>
-      </li>
       <li class="required stars">
   			<%= f.label :stars %>         
   			<% Review::STARS.each do |star| %>
