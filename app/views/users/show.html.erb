@@ -8,8 +8,14 @@
 </article>
 
 <footer>
+
 	<nav>
 		<% if current_user?(@user)%>
+			<% @reviews.each do |review| %>
+				<p>
+					<%= link_to(review.movie.title, review.movie) %> 	was given <%= pluralize(review.stars, 'star') %> stars by <%= review.user.name %> about <%= time_ago_in_words(review.created_at)%> ago. 
+				</p>
+			<% end %>
 			<%= link_to 'Edit Account', edit_user_path(@user), class: 'button' %>
 			<%= link_to 'Delete Account', @user,
 				method: :delete,
