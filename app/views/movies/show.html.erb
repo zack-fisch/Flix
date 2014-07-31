@@ -51,9 +51,9 @@
 
   <% if current_user %>
     <% if @current_favorite %>
-      <%= button_to "Unfave", movie_favorite_path(@movie, @current_favorite), method: :delete %>
+      <%= button_to "Unfave", movie_favorite_path(@movie, @current_favorite), method: :delete, class: 'button unfave' %>
      <% else %>  
-      <%= button_to 'Fave It', movie_favorites_path(@movie), class: 'button' %>
+      <%= button_to 'Fave It', movie_favorites_path(@movie), class: 'button fave' %>
      <% end %>
  <% end %>
   
