@@ -33,6 +33,21 @@
     <p>
       <%= format_average_stars(@movie) %>
     </p>
+  <h3>Fans</h3>  
+  <p>
+    <%= pluralize(@fans.size, 'fan') %>
+  </p>
+
+  <% if @fans.size > 0 %>
+    <h3>Fans</h3>
+     <ul>
+      <% @fans.each do |user| %>
+       <li>
+         <%= link_to user.name, user %>
+       </li>
+       <% end %>
+    </ul>
+  <% end %>
   
   <footer>
     <nav>
