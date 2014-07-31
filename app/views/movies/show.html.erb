@@ -45,17 +45,14 @@
       <% end %>
     </ul>
   <% end %>
-<% end %>
 
-  
-  <% if @genres.any? %>
   <h3>Genres</h3>
-    <ul>
-      <% @genres.each do |genre| %>
-        <li><%= genre.name %></li>
-      <% end %>
-    </ul>
-  <% end %>
+  <ul>
+    <% @genres.each do |genre| %>
+      <li><%= genre.name %></li>
+    <% end %>
+  </ul>
+<% end %>
 
   <% if current_user %>
     <% if @current_favorite %>
