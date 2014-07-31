@@ -51,10 +51,11 @@
 
   <% if current_user %>
     <% if @current_favorite %>
-      <%= button_to "Unfave", '#' %>
+      <%= button_to "Unfave", movie_favorite_path(@movie, @current_favorite), method: :delete %>
      <% else %>  
       <%= button_to 'Fave It', movie_favorites_path(@movie), class: 'button' %>
-  <% end %>
+     <% end %>
+ <% end %>
   
   <footer>
     <nav>
