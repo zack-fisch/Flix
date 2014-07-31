@@ -16,6 +16,16 @@
 					<%= link_to(review.movie.title, review.movie) %> 	was given <%= pluralize(review.stars, 'star') %>  by <%= review.user.name %> about <%= time_ago_in_words(review.created_at)%> ago. 
 				</p>
 			<% end %>
+			<% if @favorite_movies.any? %>
+			  <h3>Favorite Movies</h3>
+			  <ul>
+			   <% @favorite_movies.each do |movie| %>
+			     <li>
+			       <%= link_to movie.title, movie %>
+			     </li>
+			   <% end %>
+			  </ul>
+			<% end %>
 			<%= link_to 'Edit Account', edit_user_path(@user), class: 'button' %>
 			<%= link_to 'Delete Account', @user,
 				method: :delete,
