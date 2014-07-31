@@ -1,3 +1,5 @@
+<% content_for(:title, @movie.title) %>
+
 <article id="movie" class="movie">
   <header>
     <%= image_for(@movie) %>
@@ -33,7 +35,7 @@
     <p>
       <%= format_average_stars(@movie) %>
     </p>
-    
+
 <% content_for :side do %>
   <% if @fans.any? %>
     <h3>Fans</h3>
