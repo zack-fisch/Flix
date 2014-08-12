@@ -5,7 +5,7 @@ class FavoritesController < ApplicationController
 	def create
 		@movie = Movie.find(params[:movie_id])
 		favorite = @movie.favorites.build(user: current_user)
-		if (favorite.save)
+		if favorite.save
 			redirect_to @movie, notice: 'Thanks for favoriting!'
 		else
 			redirect_to @movie, notice: 'something went wrong'
@@ -13,7 +13,7 @@ class FavoritesController < ApplicationController
 	end
 
 	def destroy
-		@movie = Movie.find_by(params[:id])
+		
 		favorite = current_user.favorites.find(params[:id])
 		if favorite.destroy
 			redirect_to @movie, notice: 'Movie successfully unfaved'
@@ -24,6 +24,6 @@ end
 
 	private
 	def set_movie
-		@movie = Movie.find_by(params[:id])
+		@movie = Movie.find_by(params[:movie_id])
 	end
 end
