@@ -4,16 +4,23 @@ class FavoritesController < ApplicationController
 
 	def create
 		@movie = Movie.find(params[:movie_id])
-		@movie.favorites.create!(user: current_user)
-		redirect_to @movie, notice: 'Thanks for favoriting!'
+		favorite = @movie.favorites.build(user: current_user)
+		if (favorite.save)
+			redirect_to @movie, notice: 'Thanks for favoriting!'
+		else
+			redirect_to @movie, notice: 'something went wrong'
+		end
 	end
 
 	def destroy
 		@movie = Movie.find_by(params[:id])
 		favorite = current_user.favorites.find(params[:id])
-		favorite.destroy
-		redirect_to @movie, notice: 'Movie successfully unfaved'
+		if favorite.destroy
+			redirect_to @movie, notice: 'Movie successfully unfaved'
+		else
+			redirect_to @movie, notice: 'something went wrong'
 	end
+end
 
 	private
 	def set_movie
